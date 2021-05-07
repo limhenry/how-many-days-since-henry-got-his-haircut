@@ -1,65 +1,74 @@
-<html>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How many days since Henry got his haircut?</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<title>How many days since Henry got his haircut?</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How many days since Henry got his haircut?">
+<meta property="og:image" content="https://howmanydayssincehenrygothishaircut.limhenry.xyz/cover.jpg">
+<meta property="og:title" content="How many days since Henry got his haircut?" />
+<meta property="og:description" content="How many days since Henry got his haircut?" />
+<meta property="og:url" content="https://howmanydayssincehenrygothishaircut.limhenry.xyz/cover.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@henrylim96" />
+<meta name="twitter:title" content="How many days since Henry got his haircut?" />
+<meta name="twitter:description" content="How many days since Henry got his haircut?" />
+<meta name="twitter:image" content="https://howmanydayssincehenrygothishaircut.limhenry.xyz/cover.jpg" />
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr auto;
+    min-height: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 0 16px;
+  }
+  h1 {
+    font-size: 18vw;
+  }
+  footer {
+    opacity: 0.5;
+    padding: 12px 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  a {
+    color: inherit;
+    white-space: nowrap;
+  }
+  @media (prefers-color-scheme: dark) {
     html, body {
-      font-family: sans-serif;
-      display: grid;
-      place-items: center;
-      grid-template-rows: 1fr auto;
-      min-height: 100%;
-      margin: 0;
-      text-align: center;
-      padding: 0 16px;
+      background-color: #202020;
+      color: #fff;
     }
+  }
+  @media screen and (max-width: 860px) {
     h1 {
-      font-size: 18vw;
+      font-size: 30vw;
     }
-    footer {
-      opacity: 0.5;
-      padding: 12px 0;
-      font-size: 12px;
-      line-height: 18px;
+    h1 span {
+      display: block;
     }
-    a {
-      color: inherit;
-      white-space: nowrap;
-    }
-    @media (prefers-color-scheme: dark) {
-      html, body {
-        background-color: #202020;
-        color: #fff;
-      }
-    }
-    @media screen and (max-width: 860px) {
-      h1 {
-        font-size: 30vw;
-      }
-      h1 span {
-        display: block;
-      }
-    }
-  </style>
-  <h1>
-    <span id="days">0</span>
-    <span>days</span>
-  </h1>
-  <footer>
-    <div>&copy; Copyright 2021 Henry Lim</div>
-    <div>
-      <a href="https://github.com">GitHub</a> &middot;
-      <a href="https://twitter.com/henrylim96">Twitter</a> &middot;
-      <a href="https://limhenry.medium.com/meet-remote-for-google-slides-a-new-way-to-control-your-presentation-slides-c54a6b688674">Remote for Slides</a> &middot;
-      <a href="https://twitter.com/MYVaccineCount">Malaysia Vaccine Tracker</a>
-    </div>
-  </footer>
-  <script>
-    const timestamp = 1607161500000
-    const days = (Date.now() - timestamp) / 86400000
-    document.querySelector('h1 #days').textContent = Math.ceil(days)
-  </script>
-</html>
+  }
+</style>
+<h1>
+  <span id="days">0</span>
+  <span>days</span>
+</h1>
+<footer>
+  <div>&copy; Copyright 2021 Henry Lim</div>
+  <div>
+    <a href="https://github.com/limhenry/how-many-days-since-henry-got-his-haircut" target="_blank" rel="noopener noreferrer">GitHub</a> &middot;
+    <a href="https://twitter.com/henrylim96" target="_blank" rel="noopener noreferrer">Twitter</a> &middot;
+    <a href="https://limhenry.medium.com/meet-remote-for-google-slides-a-new-way-to-control-your-presentation-slides-c54a6b688674" target="_blank" rel="noopener noreferrer">Remote for Slides</a> &middot;
+    <a href="https://twitter.com/MYVaccineCount" target="_blank" rel="noopener noreferrer">Malaysia Vaccine Tracker</a>
+  </div>
+</footer>
+<script>
+  const timestamp = 1607161500000
+  const days = (Date.now() - timestamp) / 86400000
+  document.querySelector('h1 #days').textContent = Math.ceil(days)
+</script>
