@@ -57,7 +57,7 @@
 </style>
 <h1>
   <span id="days">0</span>
-  <span>days</span>
+  <span id="unit">days</span>
 </h1>
 <footer>
   <div>&copy; Copyright 2021 Henry Lim</div>
@@ -71,6 +71,7 @@
 <script>
   // const timestamp = 1607161500000
   const timestamp = 1641363300000
-  const days = (Date.now() - timestamp) / 86400000
-  document.querySelector('h1 #days').textContent = Math.ceil(days)
+  const days = Math.ceil((Date.now() - timestamp) / 86400000)
+  document.querySelector('h1 #days').textContent = days
+  if (days <= 1) document.querySelector('h1 #unit').textContent = "day"
 </script>
